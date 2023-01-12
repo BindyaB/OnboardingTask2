@@ -20,22 +20,22 @@ namespace Mars.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Skill")]
-    public partial class SkillFeature
+    [NUnit.Framework.DescriptionAttribute("Education")]
+    public partial class EducationFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "Skill.feature"
+#line 1 "Education.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Skill", "I want to be able to add, edit and delete skills", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Education", "I want to be able to add, edit and delete education qualification", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,13 +74,11 @@ namespace Mars.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("1 Add skills to the profile")]
+        [NUnit.Framework.DescriptionAttribute("1 I want to add Education qualification to the profile")]
         [NUnit.Framework.CategoryAttribute("tag1")]
-        [NUnit.Framework.TestCaseAttribute("Ballet", "Expert", null)]
-        [NUnit.Framework.TestCaseAttribute("Cooking", "Intermediate", null)]
-        [NUnit.Framework.TestCaseAttribute("Acrobatics", "Expert", null)]
-        [NUnit.Framework.TestCaseAttribute("Painting", "Intermediate", null)]
-        public void _1AddSkillsToTheProfile(string skills, string level, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("St. Mary University", "Canada", "BArch", "Graduation", "2000", null)]
+        [NUnit.Framework.TestCaseAttribute("University of Canterbury", "New Zealand", "PHD", "Post Graduation", "2013", null)]
+        public void _1IWantToAddEducationQualificationToTheProfile(string collegeName, string countryofCollege, string title, string degree, string yearofGraduation, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "tag1"};
@@ -90,9 +88,12 @@ namespace Mars.Features
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("Skills", skills);
-            argumentsOfScenario.Add("Level", level);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1 Add skills to the profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            argumentsOfScenario.Add("CollegeName", collegeName);
+            argumentsOfScenario.Add("CountryofCollege", countryofCollege);
+            argumentsOfScenario.Add("Title", title);
+            argumentsOfScenario.Add("Degree", degree);
+            argumentsOfScenario.Add("YearofGraduation", yearofGraduation);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1 I want to add Education qualification to the profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -107,29 +108,29 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I logged into localhost successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
- testRunner.When("I navigate to the skills tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I navigate to the education tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
- testRunner.And(string.Format("I add new \'{0}\' and \'{1}\' to the profile", skills, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I add \'{0}\', \'{1}\',\'{2}\',\'{3}\',\'{4}\'", collegeName, countryofCollege, title, degree, yearofGraduation), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 10
- testRunner.Then(string.Format("I am able to see my skills \'{0}\'", skills), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("I am able to see the \'{0}\' education qualification", collegeName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("2 Edit existing skills")]
-        [NUnit.Framework.TestCaseAttribute("Tango", "Expert", null)]
-        public void _2EditExistingSkills(string skills, string level, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("2 I want to edit me education qualification")]
+        [NUnit.Framework.TestCaseAttribute("Harvard Business School", "United States", null)]
+        public void _2IWantToEditMeEducationQualification(string collegeName, string countryOfCollege, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("Skills", skills);
-            argumentsOfScenario.Add("Level", level);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2 Edit existing skills", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 18
+            argumentsOfScenario.Add("College Name", collegeName);
+            argumentsOfScenario.Add("Country of College", countryOfCollege);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2 I want to edit me education qualification", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 16
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -139,29 +140,32 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
+#line 17
+testRunner.Given("I logged into localhost successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 18
+testRunner.When("I navigate to the education tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
 #line 19
-testRunner.When("I navigate to the skills tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And(string.Format("I edit the existing education qualification \'{0}\', \'{1}\'", collegeName, countryOfCollege), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
-testRunner.And(string.Format("I edit the existing skills \'{0}\', \'{1}\'", skills, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 21
-testRunner.Then(string.Format("I am able to see the edited skills \'{0}\'", skills), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then(string.Format("I am able to see updated \'{0}\' education qualification", collegeName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("3 Delete existing skills")]
-        [NUnit.Framework.TestCaseAttribute("Tango", null)]
-        public void _3DeleteExistingSkills(string skill, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("3 I want to delete a qualification from my profile")]
+        [NUnit.Framework.TestCaseAttribute("Harvard Business School", null)]
+        public void _3IWantToDeleteAQualificationFromMyProfile(string collegeName, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("Skill", skill);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("3 Delete existing skills", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 26
+            argumentsOfScenario.Add("College Name", collegeName);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("3 I want to delete a qualification from my profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 25
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -171,14 +175,17 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
+#line 26
+testRunner.Given("I logged into localhost successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
 #line 27
-testRunner.When("I navigate to the skills tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the education tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 28
-testRunner.And(string.Format("I delete a skill \'{0}\'", skill), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And(string.Format("I delete the existing education qualification \'{0}\'", collegeName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 29
-testRunner.Then("I am not able to see the skill in my profile \'<skill>\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then(string.Format("I am not able to see the deleted \'{0}\' education qualification anymore", collegeName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
