@@ -56,6 +56,12 @@ namespace Mars.StepDefinitions
             Assert.That(editedLanguage != language, "Language not deleted");
         }
 
+        [AfterScenario]
+        public void CloseBrowser()
+        {
+            driver.Quit();
+
+        }
 
     }
 }

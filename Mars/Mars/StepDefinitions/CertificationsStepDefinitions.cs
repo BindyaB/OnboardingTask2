@@ -60,5 +60,12 @@ namespace Mars.StepDefinitions
 
         }
 
+        [AfterScenario]
+        public void CloseBrowser()
+        {
+            driver.Quit();
+
+        }
+
     }
 }

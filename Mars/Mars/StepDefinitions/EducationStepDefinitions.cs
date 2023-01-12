@@ -55,5 +55,14 @@ namespace Mars.StepDefinitions
             string newEducation = educationObj.GetDeletedEducation();
             Assert.That(newEducation != collegeName, "College name not deleted");
         }
+
+        [AfterScenario]
+        public void CloseBrowser()
+        {
+            driver.Quit();
+    
+        }
+
+
     }
 }

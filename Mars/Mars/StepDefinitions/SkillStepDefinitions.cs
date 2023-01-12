@@ -55,5 +55,13 @@ namespace Mars.StepDefinitions
             string editedSkill = skillObj.GetDeletedSkill(skill);
             Assert.That(editedSkill != skill, "Skill not deleted");
         }
+
+        [AfterScenario]
+        public void CloseBrowser()
+        {
+            driver.Quit();
+
+        }
+
     }
 }

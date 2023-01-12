@@ -31,5 +31,12 @@ namespace Mars.StepDefinitions
             string descText = descriptionObj.GetDescription(driver);
             Assert.That(descText == "Hi I am a ballet dancer", "Description not saved");
         }
+
+        [AfterScenario]
+        public void CloseBrowser()
+        {
+            driver.Quit();
+
+        }
     }
 }
